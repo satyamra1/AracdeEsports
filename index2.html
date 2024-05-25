@@ -30,7 +30,7 @@
             margin-top: 10px;
         }
         header{
-            background-color: rgb(94, 158, 204);
+            background-color: rgb(149, 206, 247);
             padding: 20px;
             color: black;
             text-align: center;
@@ -40,13 +40,13 @@
             padding: 5px;
             background-color: rgb(222, 166, 98);
             color: black;
-            width: 100px;
+            width: 120px;
         }
         .tournaments h1{
             padding: 5px;
             background-color: rgb(222, 166, 98);
             color: black;
-            width: 200px;
+            width: 220px;
         }
       .scrims  img{
             height:150px;
@@ -71,14 +71,24 @@
 
        /* footer */
 footer{
-    background-color: rgb(94, 158, 204);
+    background-color: rgb(149, 206, 247);
     color: black;
     text-align: center;
 }
 /* footer section end */
+
+.preloader{
+    width: 100%;
+    height: 120vh;
+    background:#000 no-repeat center url("ben-redblock-loading.gif");
+    position: fixed;
+    background-size: 150px;
+    z-index: 100;
+}
     </style>
 </head>
 <body>
+    <div class="preloader"></div>
     <main>
 
         <Header>
@@ -113,6 +123,16 @@ footer{
         <p><br>
        
       </footer>
+
+
+
+    <script>
+        const fadeOut=()=>{
+            const loader = document.querySelector(".preloader");
+            loader.classList.remove("preloader");
+        }
+        window.addEventListener("load",fadeOut);
+    </script>
       
 </body>
 </html>
